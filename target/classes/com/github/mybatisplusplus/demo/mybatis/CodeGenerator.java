@@ -19,7 +19,7 @@ public class CodeGenerator {
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
         final String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir(projectPath + "/src/main/java");
+        gc.setOutputDir(projectPath + "/service/src/main/java");
         gc.setAuthor("System");
         gc.setOpen(false);
         gc.setFileOverride(true); //是否覆盖

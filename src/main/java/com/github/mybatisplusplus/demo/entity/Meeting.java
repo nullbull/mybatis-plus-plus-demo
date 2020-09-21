@@ -3,6 +3,7 @@ package com.github.mybatisplusplus.demo.entity;
 import java.time.LocalDateTime;
 import java.io.Serializable;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -13,20 +14,21 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author System
- * @since 2020-09-19
+ * @since 2020-09-21
  */
 @Data
+@TableName("meeting")
 @EqualsAndHashCode(callSuper = false)
-@TableName("room")
-public class Room implements Serializable {
+public class Meeting implements Serializable {
 
-    private static final long serialVersionUID = 1L;
 
-    private Integer id;
+    private Long id;
 
-    private Integer capacity;
+    private String meetingId;
 
-    private String name;
+    private String hostId;
+
+    private String topic;
 
     private Integer type;
 
